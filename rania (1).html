@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Autoplay Song with Video</title>
+  <style>
+    html, body {
+      background-image: url("70a5757af1e0bedce33a69f28bdb32b4.jpg");background-repeat: no-repeat;
+    background-size: 100% 100%
+
+  ;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .center-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .center-image img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .footer-text {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgb(243, 99, 204);
+      font-size: 2.5em;
+      text-align: center;
+    }
+
+    .top-right-text {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: rgb(243, 99, 204);
+      font-size: 1.5em;
+      text-align: right;
+    }
+
+    .top-left-text {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      color: rgb(243, 99, 204);
+      font-size: 1.5em;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Center Circular Image -->
+  
+  <!-- Hidden Autoplay Audio -->
+  <audio src="MONTAGEM VOZES PROFUNDAS (TikTok Version).mp3" autoplay loop hidden></audio>
+  <script>
+    const bgm = new Audio('MONTAGEM VOZES PROFUNDAS (TikTok Version).mp3');
+    bgm.loop = true;
+    bgm.volume = 1;
+    bgm.play().catch(() => {
+      document.addEventListener('click', () => bgm.play());
+    });
+  </script>
+
+  <!-- Center Circular Image -->
+  <div class="center-image">
+    <img src="23879e2c399698bf976e1b20b9a1f9c0.jpg" alt="Center Image">
+  </div>
+
+  <!-- Footer Text -->
+  <div class="footer-text">
+    <p>رانيا مرّت من هنا</p>
+  </div>
+
+  <!-- Top Right Text -->
+  <div class="top-right-text">
+    <p>I'LL FUCK YOUR SRVR</p>
+  </div>
+
+  <!-- Top Left Text -->
+  <div class="top-left-text">
+    <p>😘 RANIA KH 😘</p>
+  </div>
+
+</body>
+</html>
